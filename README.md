@@ -3,6 +3,6 @@ Este repositório é voltado para a entrega do projeto integrador do último sem
 
 Membros: 
 -
--
+- João Guilherme de Luna Pontes
 - Pedro Heryc Monte Araujo
 - Ramon Alves da Silva
