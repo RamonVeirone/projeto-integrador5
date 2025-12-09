@@ -4,5 +4,5 @@ Este repositório é voltado para a entrega do projeto integrador do último sem
 Membros: 
 -
 -
--
+- Pedro Heryc Monte Araujo
 - Ramon Alves da Silva
