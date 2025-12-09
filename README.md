@@ -6,3 +6,4 @@ Membros:
 - João Guilherme de Luna Pontes
 - Pedro Heryc Monte Araujo
 - Ramon Alves da Silva
+- Tiago Renato Messias
