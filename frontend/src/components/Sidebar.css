@@ -1,0 +1,98 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebar-logo {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  color: #fff;
+  border-bottom: 1px solid var(--border-color);
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  color: var(--primary-color);
+}
+
+.sidebar-logo h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+  background-color: rgba(255,255,255,0.03);
+}
+
+.nav-item.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+.sidebar-user {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--bg-sidebar);
+}
+
+.user-avatar {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--primary-color);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.user-role {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}

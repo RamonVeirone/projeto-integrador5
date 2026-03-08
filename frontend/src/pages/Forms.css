@@ -1,0 +1,104 @@
+.form-container {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.custom-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.custom-form label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.custom-form input,
+.custom-form textarea,
+.custom-form select {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus,
+.custom-form select:focus {
+  border-color: var(--primary-color);
+}
+
+.input-readonly {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  color: var(--text-secondary) !important;
+  cursor: not-allowed;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-actions-single {
+  margin-top: 1rem;
+}
+
+.form-actions-single .full-width {
+  width: 100%;
+  padding: 1rem;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: #fff;
+  flex: 1;
+}
+
+.btn-success:hover {
+  background-color: #0e9f6e; /* Darker green */
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  color: var(--critical-color);
+  border: 1px solid var(--border-color);
+  flex: 1;
+}
+
+.btn-outline-danger:hover {
+  border-color: var(--critical-color);
+  background-color: var(--critical-bg);
+}
+
+.custom-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
