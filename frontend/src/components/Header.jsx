@@ -19,7 +19,12 @@ const routeNames = {
 
 export default function Header() {
   const location = useLocation();
-  const title = routeNames[location.pathname] || 'CareTrack';
+  const pathname = location.pathname;
+  // Paths com parâmetro (:id ou :patientId) não batem com as chaves; usa prefixo
+  const title = routeNames[pathname]
+    || (pathname.startsWith('/paciente/detalhes') ? 'Detalhes do Paciente' : null)
+    || (pathname.startsWith('/paciente/rotinas') ? 'Rotinas do Paciente' : null)
+    || 'CareTrack';
 
   return (
     <header className="header">

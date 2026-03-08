@@ -8,7 +8,7 @@ export default function RoutineExecution() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/paciente/detalhes');
+    navigate('/pacientes');
   };
 
   return (

@@ -41,7 +41,7 @@ export default function PatientDetails() {
           <p className="patient-subtitle">{patient.gender === 'M' ? 'Masculino' : 'Feminino'}, {patient.age} anos | Leito {patient.room}</p>
         </div>
         <div className="header-actions">
-          <Link to="/paciente/rotinas" className="btn btn-primary">Ver Rotinas</Link>
+          <Link to={`/paciente/rotinas/${patient.id}`} className="btn btn-primary">Ver Rotinas</Link>
           <Link to="/prontuario" className="btn btn-secondary">Prontuário</Link>
           <Link to="/observacao" className="btn btn-secondary">Registrar Obs.</Link>
         </div>

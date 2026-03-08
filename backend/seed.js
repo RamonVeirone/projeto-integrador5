@@ -6,12 +6,13 @@ const seedData = () => {
     db.get('SELECT COUNT(*) as count FROM patients', (err, row) => {
       if (err) {
         console.error(err.message);
+        db.close();
         return;
       }
-      
+
       if (row.count === 0) {
         console.log('Populando banco de dados com dados iniciais...');
-        
+
         // Inserir Pacientes
         const insertPatient = db.prepare('INSERT INTO patients (name, age, gender, room, priority, diagnosis, admission_date) VALUES (?, ?, ?, ?, ?, ?, ?)');
         insertPatient.run('Alberto Souza', 68, 'M', '204', 'Crítico', 'Insuficiência Cardíaca Congestiva', '2023-12-05');
@@ -27,7 +28,7 @@ const seedData = () => {
         insertRoutine.run(3, 'Medicação EV', '08:15', 'Concluído', 'Enf. Ana');
         insertRoutine.run(3, 'Avaliação Médica', '16:00', 'Pendente', 'Dr. Roberto');
         insertRoutine.finalize();
-        
+
         // Inserir Observações
         const insertObs = db.prepare('INSERT INTO observations (patient_id, type, description, created_at) VALUES (?, ?, ?, ?)');
         insertObs.run(1, 'Evolução Médica', 'Paciente mantém quadro estável. Dieta aceita bem. Aguarda novos exames laboratoriais amanhã.', '2023-12-09T08:30:00Z');
@@ -37,10 +38,10 @@ const seedData = () => {
       } else {
         console.log('Banco de dados já contém informações.');
       }
+      db.close();
     });
   });
 };
 
-// Executa e fecha (só rodamos o seed manualmente)
+// Executa (fechamento do db é feito dentro do callback do db.get)
 seedData();
-setTimeout(() => db.close(), 1000);

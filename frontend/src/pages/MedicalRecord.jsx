@@ -5,9 +5,9 @@ import '../pages/PatientDetails.css';
 export default function MedicalRecord() {
   return (
     <div className="patient-details-container">
-      <Link to="/paciente/detalhes" className="back-link">
-        <ArrowLeft size={16} /> Voltar para Detalhes
-      </Link>
+<Link to="/pacientes" className="back-link">
+          <ArrowLeft size={16} /> Voltar para Lista de Pacientes
+        </Link>
       
       <div className="patient-header" style={{ alignItems: 'center' }}>
         <h2 style={{ marginBottom: 0 }}>Prontuário: Alberto Souza</h2>

@@ -13,6 +13,7 @@ import SystemAlerts from './pages/SystemAlerts';
 import ProcedureRegistration from './pages/ProcedureRegistration';
 import ClinicalHistory from './pages/ClinicalHistory';
 import OperationalReports from './pages/OperationalReports';
+import PatientRoutines from './pages/PatientRoutines';
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="pacientes" element={<PatientList />} />
+          <Route path="paciente/detalhes" element={<Navigate to="/pacientes" replace />} />
           <Route path="paciente/detalhes/:id" element={<PatientDetails />} />
+          <Route path="paciente/rotinas/:patientId?" element={<PatientRoutines />} />
           <Route path="prontuario" element={<MedicalRecord />} />
           <Route path="execucao" element={<RoutineExecution />} />
           <Route path="observacao" element={<ObservationRegistry />} />

@@ -8,14 +8,14 @@ export default function ObservationRegistry() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/paciente/detalhes');
+    navigate('/pacientes');
   };
 
   return (
     <div className="patient-details-container">
-      <Link to="/paciente/detalhes" className="back-link">
-        <ArrowLeft size={16} /> Voltar para Detalhes
-      </Link>
+<Link to="/pacientes" className="back-link">
+          <ArrowLeft size={16} /> Voltar para Lista de Pacientes
+        </Link>
       
       <div className="form-container">
         <h3 className="form-title">Registrar Nova Observação</h3>
