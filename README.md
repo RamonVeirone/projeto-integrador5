@@ -1,5 +1,5 @@
 # projeto-integrador5
-Este repositório é voltado para a entrega do projeto integrador do último semestre de ADS
+Este repositório é destinado à entrega do Projeto Integrador do último semestre de ADS.
 
 Membros: 
 - João Guilherme de Luna Pontes
