@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 import './PatientDetails.css';
 
 export default function PatientRoutines() {
@@ -14,7 +15,7 @@ export default function PatientRoutines() {
       return;
     }
     setLoading(true);
-    fetch(`http://localhost:3000/api/patients/${patientId}`)
+    fetch(`${API_BASE_URL}/api/patients/${patientId}`)
       .then(res => res.json())
       .then(data => {
         setPatient(data);

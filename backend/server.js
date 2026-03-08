@@ -83,3 +83,23 @@ app.post('/api/routines', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Backend rodando com sucesso em http://localhost:${PORT}`);
 });
+
+// 4. Registrar nova observação clínica
+app.post('/api/observations', (req, res) => {
+  const { patient_id, type, description } = req.body;
+
+  if (!patient_id || !type || !description) {
+    return res.status(400).json({ error: 'Dados insuficientes. patient_id, type e description são obrigatórios.' });
+  }
+
+  const created_at = new Date().toISOString();
+  const sql = 'INSERT INTO observations (patient_id, type, description, created_at) VALUES (?, ?, ?, ?)';
+  const params = [patient_id, type, description, created_at];
+
+  db.run(sql, params, function(err) {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.status(201).json({ id: this.lastID, message: 'Observação registrada com sucesso' });
+  });
+});

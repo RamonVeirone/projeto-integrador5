@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Activity, Clock, AlertTriangle, Users } from 'lucide-react';
 import './Dashboard.css';
 
@@ -32,7 +33,7 @@ export default function Dashboard() {
                 <h4>Leito 204 - Sr. Alberto Souza</h4>
                 <p>Administração de Insulina - Atrasada 15min</p>
               </div>
-              <button className="btn-details">Ver Detalhes</button>
+              <Link to="/paciente/detalhes/1" className="btn-details">Ver Detalhes</Link>
             </div>
             
             <div className="priority-item warning">
@@ -40,7 +41,7 @@ export default function Dashboard() {
                 <h4>Leito 301 - Sra. Maria Clara</h4>
                 <p>Avaliação Pós-Cirúrgica - Pendente</p>
               </div>
-              <button className="btn-details">Ver Detalhes</button>
+              <Link to="/paciente/detalhes/2" className="btn-details">Ver Detalhes</Link>
             </div>
           </div>
         </div>
