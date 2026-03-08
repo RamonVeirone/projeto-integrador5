@@ -1,0 +1,86 @@
+.alerts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+}
+
+.alert-item.critical {
+  border-left-color: var(--critical-color);
+}
+.alert-item.critical .alert-icon {
+  color: var(--critical-color);
+}
+
+.alert-item.warning {
+  border-left-color: var(--warning-color);
+}
+.alert-item.warning .alert-icon {
+  color: var(--warning-color);
+}
+
+.alert-item.success {
+  border-left-color: var(--success-color);
+}
+.alert-item.success .alert-icon {
+  color: var(--success-color);
+}
+
+.alert-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.alert-content h4 {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.alert-content p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.btn-critical {
+  background-color: var(--critical-bg);
+  color: var(--critical-color);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.btn-critical:hover {
+  background-color: rgba(239, 68, 68, 0.25);
+}
+
+.btn-warning {
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.btn-warning:hover {
+  background-color: rgba(245, 158, 11, 0.25);
+}
+
+.btn-close {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  transition: color 0.2s;
+}
+
+.btn-close:hover {
+  color: var(--text-primary);
+}
